@@ -7,216 +7,51 @@
   <script defer src="js/main.js"></script>
 </head>
 <body data-page="home">
-<!-- =================================
-   OSHAN.EXE CINEMATIC INTRO
-================================= -->
+<!-- OSHAN.EXE BOOT INTRO -->
+<div class="boot-intro" id="bootIntro">
 
-<div class="cinematic-intro" id="cinematicIntro">
+  <div class="boot-content">
 
-  <div class="room-scene" id="roomScene">
-
-    <!-- BACK WALL -->
-    <div class="room-wall">
-
-      <div class="wall-light wall-light-left"></div>
-      <div class="wall-light wall-light-right"></div>
-
-      <div class="wall-label">
-        OSHAN.EXE // DEVELOPER STATION
+    <!-- LOGO -->
+    <div class="boot-logo-container">
+      <div class="boot-logo" id="bootLogo">
+        <img src="assets/images/logo.png" alt="OSHAN Logo">
       </div>
 
-      <!-- LEFT SCREEN -->
-      <div class="side-screen side-screen-left">
-
-        <span>SYSTEM STATUS</span>
-
-        <div class="screen-lines"></div>
-
-        <div class="screen-bars"></div>
-
-      </div>
-
-      <!-- RIGHT SCREEN -->
-      <div class="side-screen side-screen-right">
-
-        <span>NETWORK / 01</span>
-
-        <div class="network-circle"></div>
-
-      </div>
-
+      <div class="logo-glow"></div>
     </div>
 
-
-    <!-- FLOOR -->
-    <div class="room-floor"></div>
-
-
-    <!-- DESK -->
-    <div class="desk">
-
-      <div class="desk-top"></div>
-
-      <div class="desk-front"></div>
-
-      <div class="desk-leg desk-leg-left"></div>
-
-      <div class="desk-leg desk-leg-right"></div>
-
-    </div>
-
-
-    <!-- MAIN COMPUTER MONITOR -->
-    <div class="main-monitor">
-
-      <div class="monitor-frame">
-
-        <div class="monitor-camera"></div>
-
-        <!-- FUTURISTIC WELCOME SCREEN -->
-        <div class="monitor-screen">
-
-          <div class="screen-scanline"></div>
-
-          <div class="screen-topbar">
-
-                        <span class="screen-logo">
-                            <img src="assets/images/logo.png" alt="OU">
-                            OSHAN<span>.EXE</span>
-                        </span>
-
-            <span class="screen-status">
-                            <i></i> SYSTEM ONLINE
-                        </span>
-
-          </div>
-
-
-          <div class="welcome-content">
-
-                        <span class="welcome-label">
-                            &lt; INITIALIZING DIGITAL EXPERIENCE /&gt;
-                        </span>
-
-            <h1>
-              WELCOME TO
-              <br>
-              <span>MY DIGITAL WORLD.</span>
-            </h1>
-
-            <div class="welcome-name">
-              <span class="name-line"></span>
-              OSHAN UDEESHA
-              <span class="name-line"></span>
-            </div>
-
-            <p class="welcome-description">
-              FULL STACK DEVELOPER · CREATIVE THINKER · TECH ENTHUSIAST
-            </p>
-
-            <div class="welcome-button">
-              ENTER EXPERIENCE <span>↗</span>
-            </div>
-
-          </div>
-
-
-          <!-- DECORATIVE CIRCLES -->
-          <div class="screen-orbit orbit-one"></div>
-
-          <div class="screen-orbit orbit-two"></div>
-
-          <div class="screen-bottom">
-
-            <span>BUILDING THE FUTURE / ONE LINE AT A TIME</span>
-
-            <span>01 // 06</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="monitor-neck"></div>
-
-      <div class="monitor-base"></div>
-
-    </div>
-
-
-    <!-- COMPUTER TOWER -->
-    <div class="computer-tower">
-
-      <div class="tower-glass">
-
-        <div class="tower-fan fan-one"></div>
-
-        <div class="tower-fan fan-two"></div>
-
-        <div class="tower-fan fan-three"></div>
-
-      </div>
-
-      <div class="tower-light"></div>
-
-    </div>
-
-
-    <!-- KEYBOARD -->
-    <div class="keyboard">
-
-      <div class="keyboard-keys"></div>
-
-    </div>
-
-
-    <!-- MOUSE -->
-    <div class="mouse"></div>
-
-
-    <!-- NEON LINES -->
-    <div class="neon-line neon-line-one"></div>
-
-    <div class="neon-line neon-line-two"></div>
-
-  </div>
-
-
-  <!-- INTRO CAPTION -->
-  <div class="intro-caption" id="introCaption">
-
-        <span class="caption-small">
-            WELCOME TO MY DIGITAL WORLD
-        </span>
-
-    <h1>
+    <!-- BRAND NAME -->
+    <div class="boot-brand">
       OSHAN<span>.EXE</span>
-    </h1>
+    </div>
 
-    <p>
-      INITIALIZING DEVELOPER ENVIRONMENT...
-    </p>
-
-    <div class="caption-loader">
-
-      <div></div>
-
+    <div class="boot-message">
+      INITIALIZING DIGITAL EXPERIENCE
     </div>
 
   </div>
 
+  <!-- BOTTOM LOADING AREA -->
+  <div class="boot-loader">
 
-  <!-- SKIP BUTTON -->
-  <button class="skip-intro" id="skipIntro">
+    <div class="loader-info">
+      <span>SYSTEM BOOT SEQUENCE</span>
+      <span id="bootPercentage">00%</span>
+    </div>
 
-    SKIP INTRO <span>↗</span>
+    <div class="loader-track">
+      <div class="loader-progress" id="bootProgress"></div>
+    </div>
 
-  </button>
+    <div class="loader-footer">
+      <span>LOADING PORTFOLIO ASSETS</span>
+      <span>OSHAN UDEESHA // 2026</span>
+    </div>
+
+  </div>
 
 </div>
-
 
 
   <div class="noise"></div><div class="scanline"></div>

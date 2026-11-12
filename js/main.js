@@ -351,3 +351,75 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") closeLightbox();
   });
 });
+
+
+
+
+/* =====================================
+   OSHAN.EXE - BOOT INTRO CONTROLLER
+===================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const intro = document.getElementById("bootIntro");
+
+  if (!intro) return;
+
+  // Play only once per browser session
+  if (sessionStorage.getItem("oshanIntroPlayed")) {
+    intro.remove();
+    return;
+  }
+
+  const logo = document.getElementById("bootLogo");
+  const progress = document.getElementById("bootProgress");
+  const percentage = document.getElementById("bootPercentage");
+
+  let currentProgress = 0;
+
+  const duration = 3500;
+  const interval = 35;
+  const increment = 100 / (duration / interval);
+
+  const loader = setInterval(() => {
+
+    currentProgress += increment;
+
+    if (currentProgress >= 100) {
+      currentProgress = 100;
+      clearInterval(loader);
+    }
+
+    progress.style.width = currentProgress + "%";
+
+    percentage.textContent =
+        Math.floor(currentProgress).toString().padStart(2, "0") + "%";
+
+  }, interval);
+
+  // Finish boot sequence
+  setTimeout(() => {
+
+    // Final logo flip
+    logo.style.animation = "none";
+
+    void logo.offsetWidth;
+
+    logo.style.animation = "logoFlip 0.8s ease-in-out";
+
+    // Wait for final flip
+    setTimeout(() => {
+
+      sessionStorage.setItem("oshanIntroPlayed", "true");
+
+      intro.classList.add("boot-exit");
+
+      setTimeout(() => {
+        intro.remove();
+      }, 1300);
+
+    }, 800);
+
+  }, duration);
+
+});
