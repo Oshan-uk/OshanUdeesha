@@ -377,8 +377,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentProgress = 0;
 
-  const duration = 3500;
-  const interval = 35;
+  const duration = 4500;
+  const interval = 45;
   const increment = 100 / (duration / interval);
 
   const loader = setInterval(() => {
@@ -416,9 +416,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(() => {
         intro.remove();
-      }, 1300);
+      }, 1500);
 
-    }, 800);
+    }, 900);
 
   }, duration);
 

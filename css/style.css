@@ -2768,3 +2768,15 @@ select {
         flex-wrap: wrap;
     }
 }
+
+/* MOBILE PROFILE CARD FIX */
+@media (max-width: 768px) {
+    .profile-card {
+        width: 85%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        transform: scale(0.85);
+        transform-origin: center top;
+    }
+}
